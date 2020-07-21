@@ -1,0 +1,25 @@
+@import '~@angular/material/theming';
+@include mat-core();
+$scheduler-primary: mat-palette($mat-indigo);
+$scheduler-accent: mat-palette($mat-pink, A200, A100, A400);
+$scheduler-warn: mat-palette($mat-red);
+
+$scheduler-theme: mat-light-theme((
+  color: (
+    primary: $scheduler-primary,
+    accent: $scheduler-accent,
+    warn: $scheduler-warn,
+  )
+));
+@include angular-material-theme($scheduler-theme);
+
+html, body {
+  height: 100%;
+  background: rgb(251,251,251);
+  background: linear-gradient(0deg, rgba(251,251,251,1) 0%, rgba(244,247,251,1) 100%);
+  color: #272740;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
