@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "strangesast-scheduler"
+  },
+  "targets": {
+    "strangesast-scheduler": {
+      "hosting": {
+        "scheduler": [
+          "strangesast-scheduler"
+        ]
+      }
+    }
   }
 }
