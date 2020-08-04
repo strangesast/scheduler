@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "strangesast-scheduler": {
+      "hosting": {
+        "site": [
+          "strangesast-scheduler"
+        ]
+      }
+    }
+  }
+}
