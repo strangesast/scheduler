@@ -1,0 +1,32 @@
+on:
+  push:
+    branches:
+      - round2
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    env:
+      working-directory: ./client
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: npm install
+      - name: Lint
+        run: npm run lint
+      - name: Build
+        run: npm run build --prod
+      - name: Test
+        run: npm test
+      - name: E2E
+        run: npm run e2e
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: master  # deploying branch

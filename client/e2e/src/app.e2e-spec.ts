@@ -11,12 +11,12 @@ describe('workspace-project App', () => {
   });
 
   it('Test Puppeteer screenshot', async () => {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto('http://localhost:4200');
-    await page.screenshot({ path: 'example.png' });
+    const puppetBrowser = await puppeteer.launch();
+    const puppetPage = await puppetBrowser.newPage();
+    await puppetPage.goto('http://localhost:4200');
+    await puppetPage.screenshot({ path: 'example.png' });
 
-    await browser.close();
+    await puppetBrowser.close();
   });
 
   it('should display welcome message', () => {

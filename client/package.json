@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host=0.0.0.0 --disableHostCheck",
     "build": "ng build",
     "build:prod": "ng build --prod",
-    "test": "ng test",
+    "test": "ng test --code-coverage --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "sme": "ng build --prod --source-map && source-map-explorer dist/site/**/*.js --html > bundle-size.html"
@@ -26,7 +26,7 @@
     "@angular/router": "~10.0.6",
     "@angular/service-worker": "~10.0.6",
     "@ngrx/store": "10.0.0-beta.1",
-    "firebase": "^7.13.1",
+    "firebase": "^7.17.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
