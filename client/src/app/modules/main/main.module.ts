@@ -9,7 +9,7 @@ import { StoreModule } from '@ngrx/store';
 
 import { SharedModule } from '../shared/shared.module';
 import { environment } from '../../../environments/environment';
-import { MainContainerComponent } from '../../main-container/main-container.component';
+import { MainContainerComponent } from './containers/main-container/main-container.component';
 
 const routes: Routes = [
   {path: '', component: MainContainerComponent },
