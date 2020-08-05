@@ -6,27 +6,43 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-18.04
-    env:
-      working-directory: ./client
     steps:
       - uses: actions/checkout@v2
+
       - uses: actions/setup-node@v2-beta
         with:
           node-version: '14'
+
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install dependencies
+        working-directory: ./client
         run: npm install
+
       - name: Lint
+        working-directory: ./client
         run: npm run lint
+
       - name: Build
+        working-directory: ./client
         run: npm run build --prod
+
       - name: Test
+        working-directory: ./client
         run: npm test
+
       - name: E2E
+        working-directory: ./client
         run: npm run e2e
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: master  # deploying branch
+          publish_dir: ./client/dist/site
+          publish_branch: gh-pages
