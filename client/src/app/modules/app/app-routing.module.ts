@@ -5,16 +5,16 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./splash/splash.module').then((m) => m.SplashModule),
+      import('../splash/splash.module').then((m) => m.SplashModule),
   },
   {
     path: 'main',
-    loadChildren: () => import('./main/main.module').then((m) => m.MainModule),
+    loadChildren: () => import('../main/main.module').then((m) => m.MainModule),
   },
   {
     path: 'setup',
     loadChildren: () =>
-      import('./setup/setup.module').then((m) => m.SetupModule),
+      import('../setup/setup.module').then((m) => m.SetupModule),
   },
 ];
 

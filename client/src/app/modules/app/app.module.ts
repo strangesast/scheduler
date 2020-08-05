@@ -5,8 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from '../containers/app.component';
-import { environment } from '../../environments/environment';
+import { AppComponent } from './containers/app.component';
+import { environment } from '../../../environments/environment';
 
 @NgModule({
   declarations: [

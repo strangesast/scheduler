@@ -70,6 +70,9 @@
               ],
               "serviceWorker": true,
               "ngswConfigPath": "ngsw-config.json"
+            },
+            "gh": {
+              "baseHref": "/scheduler"
             }
           }
         },

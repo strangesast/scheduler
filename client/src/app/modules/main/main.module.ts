@@ -13,6 +13,7 @@ import { MainContainerComponent } from './containers/main-container/main-contain
 
 const routes: Routes = [
   {path: '', component: MainContainerComponent },
+  {path: 'settings', loadChildren: () => import('../user-settings/user-settings.module').then(m => m.UserSettingsModule) },
 ];
 
 

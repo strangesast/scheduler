@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - round2
+      - dev
 
 jobs:
   deploy:
@@ -30,7 +30,7 @@ jobs:
 
       - name: Build
         working-directory: ./client
-        run: npm run build --prod
+        run: npm run build:gh
 
       - name: Test
         working-directory: ./client
@@ -39,6 +39,15 @@ jobs:
       - name: E2E
         working-directory: ./client
         run: npm run e2e
+
+# Broken!
+#      - name: Merge development into staging
+#        uses: devmasx/merge-branch@v1.3.0
+#        with:
+#          type: now
+#          from_branch: dev
+#          target_branch: staging
+#          github_token: ${{ github.token }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

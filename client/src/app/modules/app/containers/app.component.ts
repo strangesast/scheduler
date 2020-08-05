@@ -1,8 +1,4 @@
 import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { SwPush } from '@angular/service-worker';
-
-import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-root',

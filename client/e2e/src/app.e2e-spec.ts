@@ -19,10 +19,12 @@ describe('workspace-project App', () => {
     await puppetBrowser.close();
   });
 
+  /*
   it('should display welcome message', () => {
     page.navigateTo();
     expect(page.getTitleText()).toEqual('Arriba');
   });
+  */
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser

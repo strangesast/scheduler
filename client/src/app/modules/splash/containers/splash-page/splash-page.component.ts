@@ -36,7 +36,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
         <div class="container">
           <div class="title">
             <figure class="image is-5by3">
-              <img src="assets/logo.svg"/>
+              <img src="assets/logo.svg" alt="Scheduler"/>
             </figure>
           </div>
           <p class="subtitle">
