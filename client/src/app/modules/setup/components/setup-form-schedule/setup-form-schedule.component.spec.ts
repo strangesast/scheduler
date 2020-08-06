@@ -18,9 +18,8 @@ describe('SetupFormScheduleComponent', () => {
         ReactiveFormsModule,
         MaterialModule,
       ],
-      declarations: [ SetupFormScheduleComponent ]
-    })
-    .compileComponents();
+      declarations: [SetupFormScheduleComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

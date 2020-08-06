@@ -9,7 +9,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
           <div class="container">
             <div class="navbar-brand">
               <a class="navbar-item">
-                <img src="assets/logo.svg"/>
+                <img src="assets/logo.svg" />
               </a>
             </div>
             <div class="navbar-menu">
@@ -36,11 +36,13 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
         <div class="container">
           <div class="title">
             <figure class="image is-5by3">
-              <img src="assets/logo.svg" alt="Scheduler"/>
+              <img src="assets/logo.svg" alt="Scheduler" />
             </figure>
           </div>
           <p class="subtitle">
-            <a class="button is-primary" [routerLink]="['/setup']">Get Started</a>
+            <a class="button is-primary" [routerLink]="['/setup']"
+              >Get Started</a
+            >
           </p>
         </div>
       </div>

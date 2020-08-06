@@ -12,10 +12,15 @@ import { environment } from '../../../environments/environment';
 import { MainContainerComponent } from './containers/main-container/main-container.component';
 
 const routes: Routes = [
-  {path: '', component: MainContainerComponent },
-  {path: 'settings', loadChildren: () => import('../user-settings/user-settings.module').then(m => m.UserSettingsModule) },
+  { path: '', component: MainContainerComponent },
+  {
+    path: 'settings',
+    loadChildren: () =>
+      import('../user-settings/user-settings.module').then(
+        (m) => m.UserSettingsModule
+      ),
+  },
 ];
-
 
 @NgModule({
   declarations: [MainContainerComponent],
@@ -27,6 +32,6 @@ const routes: Routes = [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
     AngularFirestoreModule,
-  ]
+  ],
 })
-export class MainModule { }
+export class MainModule {}

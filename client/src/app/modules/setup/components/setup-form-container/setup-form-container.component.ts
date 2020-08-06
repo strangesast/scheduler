@@ -6,23 +6,29 @@ import { BehaviorSubject } from 'rxjs';
   selector: 'app-setup-form-container',
   template: `
     <div class="box" [ngSwitch]="step$ | async">
-      <app-setup-form-org *ngSwitchCase="0" (completed)="nextStep()"></app-setup-form-org>
-      <app-setup-form-schedule *ngSwitchCase="1" (completed)="nextStep()"></app-setup-form-schedule>
+      <app-setup-form-org
+        *ngSwitchCase="0"
+        (completed)="nextStep()"
+      ></app-setup-form-org>
+      <app-setup-form-schedule
+        *ngSwitchCase="1"
+        (completed)="nextStep()"
+      ></app-setup-form-schedule>
     </div>
   `,
   styles: [
     `
-    :host {
-      display: block;
-      max-width: 520px;
-    }
-    form {
-      display: grid;
-      grid-gap: 12px;
-    }
-    `
+      :host {
+        display: block;
+        max-width: 520px;
+      }
+      form {
+        display: grid;
+        grid-gap: 12px;
+      }
+    `,
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SetupFormContainerComponent {
   step$ = new BehaviorSubject(0);

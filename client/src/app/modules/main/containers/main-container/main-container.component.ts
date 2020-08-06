@@ -54,10 +54,10 @@ import { DAYS_OF_WEEK } from '../../../../util';
               <div class="content">
                 <table class="table is-fullwidth is-striped">
                   <tr>
-                    <th *ngFor="let day of days">{{day}}</th>
+                    <th *ngFor="let day of days">{{ day }}</th>
                   </tr>
                   <tr *ngFor="let row of rows">
-                    <td *ngFor="let col of row">{{col}}</td>
+                    <td *ngFor="let col of row">{{ col }}</td>
                   </tr>
                 </table>
               </div>

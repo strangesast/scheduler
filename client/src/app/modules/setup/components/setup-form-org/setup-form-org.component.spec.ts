@@ -18,9 +18,8 @@ describe('SetupFormOrgComponent', () => {
         ReactiveFormsModule,
         MaterialModule,
       ],
-      declarations: [ SetupFormOrgComponent ]
-    })
-    .compileComponents();
+      declarations: [SetupFormOrgComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

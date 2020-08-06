@@ -10,13 +10,9 @@ describe('RegisterFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        ReactiveFormsModule,
-        RouterTestingModule,
-      ],
-      declarations: [ RegisterFormComponent ]
-    })
-    .compileComponents();
+      imports: [ReactiveFormsModule, RouterTestingModule],
+      declarations: [RegisterFormComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

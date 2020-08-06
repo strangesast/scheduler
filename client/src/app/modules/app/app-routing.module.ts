@@ -9,7 +9,17 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    loadChildren: () => import('../auth/auth.module').then(m => m.AuthModule),
+    loadChildren: () => import('../auth/auth.module').then((m) => m.AuthModule),
+  },
+  {
+    path: 'employee',
+    loadChildren: () =>
+      import('../employee/employee.module').then((m) => m.EmployeeModule),
+  },
+  {
+    path: 'management',
+    loadChildren: () =>
+      import('../management/management.module').then((m) => m.ManagementModule),
   },
   {
     path: 'main',

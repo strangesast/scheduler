@@ -8,9 +8,8 @@ describe('DaysPickerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DaysPickerComponent ]
-    })
-    .compileComponents();
+      declarations: [DaysPickerComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

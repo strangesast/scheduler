@@ -5,29 +5,39 @@ import { FormBuilder, Validators } from '@angular/forms';
   selector: 'app-login-form',
   template: `
     <h1 class="title">Sign In With Email</h1>
+    <p class="description">
+      No mail will be sent to this address after it is verified.
+    </p>
     <form [formGroup]="form">
       <mat-form-field appearance="outline">
         <mat-label>Email</mat-label>
-        <input type="email" matInput placeholder="john.doe@example.com">
+        <input type="email" matInput placeholder="john.doe@example.com" />
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
-        <input type="password" matInput placeholder="secret123">
+        <input type="password" matInput placeholder="secret123" />
       </mat-form-field>
-      <div class="level">
-        <div class="level-left">
-          <div class="level-item">
-            <button type="submit" class="button is-primary">Submit</button>
-          </div>
-          <div class="level-item">
-            <a [routerLink]="['../register']">Create Account</a>
-          </div>
-        </div>
-      </div>
+      <button class="button is-block is-primary is-fullwidth is-medium">
+        Submit
+      </button>
+      <p class="description">
+        <a [routerLink]="['../register']">Create Account</a>
+      </p>
     </form>
   `,
-  styles: [],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styles: [
+    `
+      :host,
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      .description {
+        margin: 1.4rem;
+      }
+    `,
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginFormComponent implements OnInit {
   form = this.fb.group({
@@ -35,9 +45,7 @@ export class LoginFormComponent implements OnInit {
     password: ['', Validators.required],
   });
 
-  constructor(public fb: FormBuilder) { }
+  constructor(public fb: FormBuilder) {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

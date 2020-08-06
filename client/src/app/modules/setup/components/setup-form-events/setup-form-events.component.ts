@@ -7,15 +7,11 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
       setup-form-events works!
     </p>
   `,
-  styles: [
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SetupFormEventsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

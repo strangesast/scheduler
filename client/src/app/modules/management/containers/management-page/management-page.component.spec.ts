@@ -8,9 +8,8 @@ describe('ManagementPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ManagementPageComponent ]
-    })
-    .compileComponents();
+      declarations: [ManagementPageComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -10,13 +10,9 @@ describe('LoginFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        ReactiveFormsModule,
-        RouterTestingModule,
-      ],
-      declarations: [ LoginFormComponent ]
-    })
-    .compileComponents();
+      imports: [ReactiveFormsModule, RouterTestingModule],
+      declarations: [LoginFormComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

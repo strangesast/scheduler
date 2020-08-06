@@ -11,11 +11,15 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 
 const routes: Routes = [
-  {path: '', component: AuthPageComponent, children: [
-    { path: '', pathMatch: 'full', redirectTo: 'signin' },
-    { path: 'signin',  component: LoginFormComponent },
-    { path: 'register',  component: RegisterFormComponent },
-  ]},
+  {
+    path: '',
+    component: AuthPageComponent,
+    children: [
+      { path: '', pathMatch: 'full', redirectTo: 'signin' },
+      { path: 'signin', component: LoginFormComponent },
+      { path: 'register', component: RegisterFormComponent },
+    ],
+  },
 ];
 
 @NgModule({
@@ -26,13 +30,13 @@ const routes: Routes = [
     MaterialModule,
     ReactiveFormsModule,
     RouterModule.forChild(routes),
-  ]
+  ],
 })
 export class AuthModule {
   static forRoot(): ModuleWithProviders<AuthModule> {
     return {
       ngModule: AuthModule,
-      providers: [ AuthService ],
+      providers: [AuthService],
     };
   }
 }

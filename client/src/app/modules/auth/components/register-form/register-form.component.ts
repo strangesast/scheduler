@@ -8,11 +8,11 @@ import { FormBuilder, Validators } from '@angular/forms';
     <form [formGroup]="form">
       <mat-form-field appearance="outline">
         <mat-label>Email</mat-label>
-        <input type="email" matInput placeholder="john.doe@example.com">
+        <input type="email" matInput placeholder="john.doe@example.com" />
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
-        <input type="password" matInput placeholder="secret123">
+        <input type="password" matInput placeholder="secret123" />
       </mat-form-field>
       <div class="level">
         <div class="level-left">
@@ -27,8 +27,15 @@ import { FormBuilder, Validators } from '@angular/forms';
     </form>
   `,
   styles: [
+    `
+      :host,
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+    `,
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RegisterFormComponent implements OnInit {
   form = this.fb.group({
@@ -36,9 +43,7 @@ export class RegisterFormComponent implements OnInit {
     password: ['', Validators.required],
   });
 
-  constructor(public fb: FormBuilder) { }
+  constructor(public fb: FormBuilder) {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

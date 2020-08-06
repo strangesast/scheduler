@@ -8,9 +8,8 @@ describe('SplashPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SplashPageComponent ]
-    })
-    .compileComponents();
+      declarations: [SplashPageComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

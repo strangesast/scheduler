@@ -6,14 +6,11 @@ type Sig = (v: string[]) => void;
 
 @Component({
   selector: 'app-days-picker',
-  template: `
-  `,
-  styles: [
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  template: ``,
+  styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DaysPickerComponent implements OnInit, ControlValueAccessor {
-
   value: string[] = [];
 
   writeValue(nextValue: string[]): void {
@@ -31,9 +28,7 @@ export class DaysPickerComponent implements OnInit, ControlValueAccessor {
     this.onTouched = fn;
   }
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

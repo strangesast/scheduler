@@ -7,15 +7,11 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
       setup-form-employees works!
     </p>
   `,
-  styles: [
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SetupFormEmployeesComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

@@ -13,10 +13,7 @@ import { SetupFormRolesComponent } from './components/setup-form-roles/setup-for
 import { SetupFormEmployeesComponent } from './components/setup-form-employees/setup-form-employees.component';
 import { SetupFormEventsComponent } from './components/setup-form-events/setup-form-events.component';
 
-const routes: Routes = [
-  {path: '', component: SetupPageComponent },
-];
-
+const routes: Routes = [{ path: '', component: SetupPageComponent }];
 
 @NgModule({
   declarations: [
@@ -34,6 +31,6 @@ const routes: Routes = [
     MaterialModule,
     ReactiveFormsModule,
     RouterModule.forChild(routes),
-  ]
+  ],
 })
-export class SetupModule { }
+export class SetupModule {}

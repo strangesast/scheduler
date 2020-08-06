@@ -3,7 +3,7 @@ import { SwPush } from '@angular/service-worker';
 import { environment } from '../../../../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NotificationService {
   readonly VAPID_PUBLIC_KEY = environment.push.publicKey;
@@ -14,10 +14,13 @@ export class NotificationService {
   ) {}
 
   subscribeToNotifications(): void {
-    this.swPush.requestSubscription({
-            serverPublicKey: this.VAPID_PUBLIC_KEY
-        })
-        .then(sub => console.log('sub', sub))
-        .catch(err => console.error('Could not subscribe to notifications', err));
+    this.swPush
+      .requestSubscription({
+        serverPublicKey: this.VAPID_PUBLIC_KEY,
+      })
+      .then((sub) => console.log('sub', sub))
+      .catch((err) =>
+        console.error('Could not subscribe to notifications', err)
+      );
   }
 }
