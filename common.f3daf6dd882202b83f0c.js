@@ -1,2 +1,2 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[2],{opfD:function(a,t,e){"use strict";e.d(t,"a",(function(){return n}));const n=(()=>{var a;const t=(null===(a=navigator.languages)||void 0===a?void 0:a.length)?navigator.languages[0]:navigator.language,e=new Date;e.setDate(e.getDate()-e.getDay());const[n,o,r]=[e.getFullYear(),e.getMonth(),e.getDate()],g={weekday:"short"};return Array.from(Array(7)).map((a,e)=>new Date(n,o,r+e).toLocaleDateString(t,g))})()}}]);
-//# sourceMappingURL=common.b8d5e81ed057c4ad8e29.js.map
+//# sourceMappingURL=common.f3daf6dd882202b83f0c.js.map
