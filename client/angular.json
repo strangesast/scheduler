@@ -72,7 +72,8 @@
               "ngswConfigPath": "ngsw-config.json"
             },
             "gh": {
-              "baseHref": "/scheduler"
+              "baseHref": "https://strangesast.github.io/scheduler/",
+              "deployUrl": "/scheduler/"
             }
           }
         },

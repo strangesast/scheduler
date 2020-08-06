@@ -8,6 +8,10 @@ const routes: Routes = [
       import('../splash/splash.module').then((m) => m.SplashModule),
   },
   {
+    path: 'auth',
+    loadChildren: () => import('../auth/auth.module').then(m => m.AuthModule),
+  },
+  {
     path: 'main',
     loadChildren: () => import('../main/main.module').then((m) => m.MainModule),
   },
