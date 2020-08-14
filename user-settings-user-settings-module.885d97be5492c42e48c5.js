@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{Cnya:function(n,t,o){"use strict";o.r(t),o.d(t,"UserSettingsModule",(function(){return s}));var e=o("ofXK"),r=o("fXoL");let s=(()=>{class n{}return n.\u0275mod=r.Kb({type:n}),n.\u0275inj=r.Jb({factory:function(t){return new(t||n)},imports:[[e.c]]}),n})()}}]);
+//# sourceMappingURL=user-settings-user-settings-module.885d97be5492c42e48c5.js.map
