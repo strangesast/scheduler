@@ -1,0 +1,45 @@
+version: '3.7'
+services:
+  # node server
+  server:
+    build:
+      context: .
+      dockerfile: docker/server/Dockerfile
+    environment:
+      NODE_CONFIG: '{"secret":"secret123", "port": 80}'
+
+  # angular client
+  client:
+    build:
+      context: .
+      dockerfile: docker/client/Dockerfile
+    ports:
+      - "8081:80"
+  # graphql api
+  graphql-engine:
+    image: hasura/graphql-engine
+    ports:
+    - "8080:8080"
+    depends_on:
+    - "postgres"
+    restart: always
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: "postgres://postgres:password@postgres:5432/development"
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "true" # set to "false" to disable console
+      HASURA_GRAPHQL_ENABLED_LOG_TYPES: "startup, http-log, webhook-log, websocket-log, query-log"
+#      HASURA_GRAPHQL_ADMIN_SECRET: secretSECRETsecretSECRETsecretSECRET
+#      HASURA_GRAPHQL_JWT_SECRET: '{"type": "HS256", "key": "secretSECRETsecretSECRETsecretSECRET"}'
+
+  # database
+  postgres:
+    image: postgres
+    volumes:
+      - ./sql/:/docker-entrypoint-initdb.d/
+      - db_data:/var/lib/postgresql/data
+    ports:
+    - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+volumes:
+  db_data:
