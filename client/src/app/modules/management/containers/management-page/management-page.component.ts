@@ -22,6 +22,16 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
         </div>
       </div>
     </nav>
+    <section class="section">
+    <div class="container">
+
+    </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <app-employee-form></app-employee-form>
+      </div>
+    </section>
   `,
   styles: [
     `
